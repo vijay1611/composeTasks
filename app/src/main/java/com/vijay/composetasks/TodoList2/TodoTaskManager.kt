@@ -11,9 +11,9 @@ object TodoTaskManager {
         return todoList
     }
 
-    fun addTodo(data: String){
+   /* fun addTodo(data: String){
         todoList.add(Data(System.currentTimeMillis().toInt(),data, Date.from(Instant.now())))
-    }
+    }*/
 
     fun deleteTodo(id:Int){
         todoList.removeIf {

@@ -39,6 +39,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
+import com.vijay.composetasks.CaptureCamera.CaptureCameraScreen
+import com.vijay.composetasks.NewsApp.NewsDashBoard
+import com.vijay.composetasks.NewsApp.NewsViewModel
+import com.vijay.composetasks.StopWatch.ReverseStopwatch
+import com.vijay.composetasks.StopWatch.Stopwatch
 import com.vijay.composetasks.TodoList2.TaskList
 import com.vijay.composetasks.TodoList2.TodoViewModel
 import com.vijay.composetasks.TodoList2.getLocalData
@@ -58,9 +63,13 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    var dataList = getLocalData()
+                   var dataList = getLocalData()
                     //TodoApp()
                     TaskList(modifier = Modifier, viewModel = viewModel)
+                   /* Stopwatch()
+                    ReverseStopwatch()*/
+                  //  CaptureCameraScreen()
+                    //NewsDashBoard(viewModel = viewModel)
                 }
             }
         }

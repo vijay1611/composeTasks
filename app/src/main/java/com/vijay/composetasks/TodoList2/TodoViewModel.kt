@@ -19,9 +19,9 @@ class TodoViewModel:ViewModel() {
 //        _todoList.value = dao.getData()
 //    }
 
-    fun addTodo(data: String){
+    fun addTodo(data: String,uri:ByteArray){
         viewModelScope.launch(Dispatchers.IO) {
-            dao.addData(Data(title = data, date = Date.from(Instant.now())))
+            dao.addData(Data(title = data, date = Date.from(Instant.now()), image = uri))
         }
         //getALlTodo()
     }

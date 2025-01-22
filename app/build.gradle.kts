@@ -76,4 +76,18 @@ dependencies {
     kapt("androidx.room:room-compiler:2.5.1")
     implementation("androidx.room:room-paging:2.5.1")
 
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")  // Retrofit
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")  // Gson Converter
+    implementation("com.google.code.gson:gson:2.8.9")  // Gson
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")  // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    //coil
+    implementation("io.coil-kt:coil-compose:2.3.0")
+
+
+
 }
