@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
@@ -49,6 +48,7 @@ import com.vijay.composetasks.TodoList2.TodoViewModel
 import com.vijay.composetasks.TodoList2.getLocalData
 import com.vijay.composetasks.TodoTask.Task
 import com.vijay.composetasks.ui.theme.ComposeTasksTheme
+import kotlin.math.log2
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,13 +56,10 @@ class MainActivity : ComponentActivity() {
         val viewModel = ViewModelProvider(this)[TodoViewModel::class.java]
         setContent {
             ComposeTasksTheme {
-
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
                    var dataList = getLocalData()
                     //TodoApp()
                     TaskList(modifier = Modifier, viewModel = viewModel)
@@ -75,7 +72,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
